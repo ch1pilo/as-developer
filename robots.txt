@@ -1,0 +1,6 @@
+# Permite que todos los buscadores indexen el sitio
+User-agent: *
+Allow: /
+
+# Reemplaza https://TU-DOMINIO.com por tu dominio real cuando lo compres
+Sitemap: https://TU-DOMINIO.com/sitemap.xml
