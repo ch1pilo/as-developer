@@ -7,6 +7,7 @@ const SERVICIOS = {
   landing: 'Landing page',
   web: 'Página web informativa',
   software: 'Sistema o aplicación',
+  automatizacion: 'Automatización o chatbot de WhatsApp',
   otro: 'Asesoría para elegir',
 };
 

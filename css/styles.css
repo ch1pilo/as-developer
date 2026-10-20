@@ -827,6 +827,129 @@ button {
   }
 }
 
+/* Servicio ancho: automatizaciones y chatbots */
+.service--wide {
+  display: grid;
+  gap: 36px;
+  background: linear-gradient(170deg, var(--sage), var(--bg3) 55%);
+}
+
+.service__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.service--wide .service__icon {
+  background: var(--bg3);
+}
+
+.chat {
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 48px -28px var(--shadow-color);
+}
+
+.chat__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  color: var(--bg);
+  background: var(--primary);
+}
+
+.chat__head strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.chat__head small {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+.chat__avatar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  background: var(--camel);
+  border-radius: 50%;
+}
+
+.chat__body {
+  display: grid;
+  gap: 10px;
+  padding: 20px 18px;
+}
+
+.msg {
+  max-width: 82%;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  border-radius: 14px;
+}
+
+.msg--in {
+  justify-self: start;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+}
+
+.msg--out {
+  justify-self: end;
+  background: var(--primary-soft);
+  border-bottom-right-radius: 4px;
+}
+
+/* Los mensajes aparecen uno tras otro cuando la tarjeta entra en pantalla */
+.js .service--wide .msg {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out);
+  transition-delay: calc(300ms + var(--i) * 450ms);
+}
+
+.js .service--wide.is-visible .msg {
+  opacity: 1;
+  transform: none;
+}
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0 18px 20px;
+  list-style: none;
+}
+
+.flow li:not(.flow__arrow) {
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.flow__arrow {
+  display: flex;
+  color: var(--camel);
+}
+
 /* ===== Proyectos ===== */
 .filters {
   display: flex;
@@ -1559,6 +1682,15 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .service--wide {
+    grid-column: 1 / -1;
+  }
+
+  .service__list--cols {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
   .form {
     padding: 36px;
   }
@@ -1640,6 +1772,13 @@ button {
     transform: translateY(-16px);
   }
 
+  .service--wide {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 56px;
+    padding: 44px;
+  }
+
   .steps {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
@@ -1695,6 +1834,10 @@ button {
   .js .reveal {
     transform: none;
     transition: opacity 300ms ease;
+  }
+
+  .js .service--wide .msg {
+    transform: none;
   }
 
   .marquee__track,
