@@ -953,8 +953,12 @@ button {
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out);
-  transition-delay: calc(300ms + var(--i) * 450ms);
 }
+
+.js .service--wide .msg:nth-child(1) { transition-delay: 300ms; }
+.js .service--wide .msg:nth-child(2) { transition-delay: 750ms; }
+.js .service--wide .msg:nth-child(3) { transition-delay: 1200ms; }
+.js .service--wide .msg:nth-child(4) { transition-delay: 1650ms; }
 
 .js .service--wide.is-visible .msg {
   opacity: 1;
@@ -1703,6 +1707,19 @@ button {
 .footer a {
   color: var(--text-muted);
 }
+
+/* ===== Página legal (privacidad.html) ===== */
+.legal { max-width: 760px; margin: 0 auto; padding: 48px 20px 72px; }
+.legal__barra { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; max-width: 760px; margin: 0 auto; }
+.legal__volver { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-text); text-decoration: none; }
+.legal__volver:hover { text-decoration: underline; }
+.legal h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 8px; }
+.legal h2 { font-size: 1.15rem; margin: 36px 0 10px; }
+.legal p, .legal li { color: var(--text); line-height: 1.7; }
+.legal ul { padding-left: 22px; }
+.legal__fecha { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 28px; }
+.legal__caja { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--orange); padding: 18px 20px; }
+.legal a { color: var(--accent-text); }
 
 /* ===== WhatsApp flotante ===== */
 .whatsapp-float {

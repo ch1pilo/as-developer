@@ -200,13 +200,7 @@
   <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
-  <script>
-    // Oculta el contenido para animarlo; si main.js no carga en 2 s, lo muestra igual
-    document.documentElement.classList.add('js');
-    setTimeout(function () {
-      if (!window.landingLista) document.documentElement.classList.remove('js');
-    }, 2000);
-  </script>
+  <script src="js/arranque.js"></script>
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
@@ -402,10 +396,10 @@
                 <div><strong>Tu negocio</strong><small>Responde al instante</small></div>
               </div>
               <div class="chat__body">
-                <p class="msg msg--in" style="--i:0">Hola, ¿tienen cita disponible mañana?</p>
-                <p class="msg msg--out" style="--i:1">¡Hola! Sí, mañana tengo 10:00 a.m. y 3:00 p.m. ¿Cuál prefieres?</p>
-                <p class="msg msg--in" style="--i:2">3:00 p.m., por favor</p>
-                <p class="msg msg--out" style="--i:3">Listo, tu cita quedó agendada. Te enviaré un recordatorio el día antes.</p>
+                <p class="msg msg--in">Hola, ¿tienen cita disponible mañana?</p>
+                <p class="msg msg--out">¡Hola! Sí, mañana tengo 10:00 a.m. y 3:00 p.m. ¿Cuál prefieres?</p>
+                <p class="msg msg--in">3:00 p.m., por favor</p>
+                <p class="msg msg--out">Listo, tu cita quedó agendada. Te enviaré un recordatorio el día antes.</p>
               </div>
               <ul class="flow">
                 <li>WhatsApp</li>
