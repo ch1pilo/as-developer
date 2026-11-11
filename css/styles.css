@@ -1947,3 +1947,138 @@ button {
     transition: none;
   }
 }
+
+/* ===== Sección Productos ===== */
+.producto {
+  display: grid;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: var(--bone);
+}
+
+.producto__info {
+  padding: 36px 28px;
+}
+
+.producto__marca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.producto__marca em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.producto__llama {
+  width: 28px;
+  height: 28px;
+  fill: var(--orange);
+}
+
+.producto__rubro {
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--grey);
+  border: 1px solid var(--line-dark);
+}
+
+.producto__titulo {
+  margin-bottom: 12px;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.producto__desc {
+  max-width: 520px;
+  color: var(--grey);
+}
+
+.producto__lista {
+  margin: 22px 0 28px;
+  color: var(--bone);
+}
+
+.producto__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.producto__ghost {
+  color: var(--bone);
+  border-color: var(--line-dark);
+}
+
+.producto__planes {
+  display: grid;
+  align-content: center;
+  gap: 1px;
+  margin: 0;
+  padding: 0 28px 36px;
+  list-style: none;
+}
+
+.producto__planes li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--panel-dark);
+  border: 1px solid var(--line-dark);
+}
+
+.producto__planes span {
+  font-size: 0.85rem;
+  color: var(--grey);
+}
+
+.producto__planes strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--bone);
+}
+
+.producto__planes b {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.producto__planes small {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.producto__planes .producto__plan--destacado {
+  border-color: var(--orange);
+}
+
+.producto__plan--pronto b {
+  font-size: 1rem;
+  color: var(--grey-dark);
+}
+
+@media (min-width: 1024px) {
+  .producto {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .producto__info {
+    padding: 48px;
+  }
+
+  .producto__planes {
+    padding: 48px 48px 48px 0;
+  }
+}
