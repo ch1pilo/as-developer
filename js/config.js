@@ -7,4 +7,5 @@ const CONFIG = {
   // Número de WhatsApp con código de país, sin +, espacios ni guiones.
   whatsapp: '584246018457',
   mensajeWhatsapp: 'Hola Ángel, vi tu página y quiero cotizar un proyecto.',
+  mensajeWhatsappFire: 'Hola Ángel, vi Forger Fire y quiero información para mi restaurante.',
 };

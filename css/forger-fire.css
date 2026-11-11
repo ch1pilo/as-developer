@@ -1,0 +1,266 @@
+/* ===== Página Forger Fire (forger-fire.html) =====
+   Usa styles.css como base; aquí solo lo propio del producto. */
+
+.nav__link--activo {
+  color: var(--orange);
+}
+
+/* El header es fijo: la primera sección deja su espacio */
+.producto-hero {
+  padding-top: calc(var(--header-h) + 64px);
+}
+
+/* ===== Hero del producto ===== */
+.producto-hero__grid {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+}
+
+.producto-hero__marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.producto-hero__marca em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.producto-hero__llama {
+  width: 30px;
+  height: 30px;
+  fill: var(--orange);
+}
+
+.producto-hero__titulo {
+  margin-bottom: 18px;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+}
+
+.producto-hero__titulo em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.producto-hero__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.modulos {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.modulos li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: var(--card);
+}
+
+.modulos .icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  color: var(--orange);
+}
+
+.modulos strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.modulos span {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.modulos strong {
+  color: var(--text);
+}
+
+/* ===== Planes ===== */
+.planes {
+  display: grid;
+  gap: 20px;
+}
+
+.plan__chip {
+  align-self: flex-start;
+  margin-bottom: 18px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--success);
+  border: 1px solid currentColor;
+}
+
+.plan__chip--gris {
+  color: var(--text-dim);
+}
+
+.service--featured .service__kicker {
+  margin-top: 30px;
+}
+
+.plan__precio {
+  margin: 8px 0 14px;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.plan__precio span {
+  font-size: 1.6rem;
+  vertical-align: top;
+}
+
+.plan__precio small {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+
+.plan__precio--pronto {
+  font-size: 2rem;
+  color: var(--text-dim);
+}
+
+.plan .service__list {
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+.plan__nota {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.plan--pronto {
+  opacity: 0.7;
+}
+
+.pagos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagos li {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+/* ===== Pasos ===== */
+.pasos {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pasos li {
+  padding: 28px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.pasos__num {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--orange);
+}
+
+.pasos strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.pasos p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ===== Vista previa de la URL ===== */
+.url-preview {
+  margin-top: 32px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.url-preview__label,
+.url-preview__ayuda {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.url-preview__url {
+  margin: 6px 0;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.url-preview__url b {
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.form__status.is-success {
+  padding: 14px;
+  border: 1px solid currentColor;
+}
+
+/* ===== Tamaños ===== */
+@media (min-width: 768px) {
+  .pasos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .producto-hero__grid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .planes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pasos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
