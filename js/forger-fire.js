@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initSolicitud();
   initWhatsApp();
+  initLogin();
   document.getElementById('year').textContent = new Date().getFullYear();
 });
 
@@ -44,6 +45,11 @@ function initHeader() {
   actualizar();
 }
 
+// Base del sistema sin la barra final: 'https://panel.../' -> 'https://panel...'
+const URL_SISTEMA = CONFIG.urlSistema.replace(/\/+$/, '');
+// Dirección del menú público sin https://, para mostrarla: 'panel.../publico/'
+const URL_MENU = `${URL_SISTEMA.replace(/^https?:\/\//, '')}/publico/`;
+
 // "Pizzería Don José" -> "pizzeria-don-jose"
 function aSlug(texto) {
   return texto
@@ -74,6 +80,7 @@ function initSolicitud() {
   const submitBtn = form.querySelector('[type="submit"]');
   const textoBoton = submitBtn.textContent;
   const slugPreview = document.getElementById('slug-preview');
+  document.querySelector('[data-url-menu]').textContent = URL_MENU;
 
   // Vista previa de la URL mientras escribe el nombre
   form.elements.restaurante.addEventListener('input', (e) => {
@@ -107,7 +114,7 @@ function initSolicitud() {
     }
 
     const slug = aSlug(form.elements.restaurante.value);
-    const exito = `¡Solicitud enviada! En menos de 24 horas te llega por WhatsApp el acceso a fire.forgerdev.com/${slug}.`;
+    const exito = `¡Solicitud enviada! En menos de 24 horas te llega por WhatsApp el acceso a tu sistema. Tu menú quedará en ${URL_MENU}${slug}.`;
 
     // Si un bot llenó el campo trampa, fingimos éxito y no enviamos nada
     if (form.elements._honey.value) {
@@ -139,7 +146,7 @@ async function enviarSolicitud(form, slug) {
   const plan = PLANES[v('plan')];
   const datos = {
     Restaurante: v('restaurante'),
-    URL: `fire.forgerdev.com/${slug}`,
+    'Menú público': `${URL_MENU}${slug}`,
     Plan: plan,
     Dueño: v('dueno'),
     WhatsApp: v('telefono'),
@@ -190,4 +197,13 @@ function setStatus(el, mensaje, tipo) {
 function initWhatsApp() {
   const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.mensajeWhatsappFire)}`;
   document.querySelectorAll('[data-whatsapp-link]').forEach((link) => { link.href = url; });
+}
+
+// ===== Botón "Iniciar sesión" (solo si hay urlSistema en config.js) =====
+function initLogin() {
+  if (!URL_SISTEMA) return;
+  document.querySelectorAll('[data-login-link]').forEach((link) => {
+    link.href = `${URL_SISTEMA}/login`;
+    link.closest('[data-login]').hidden = false;
+  });
 }

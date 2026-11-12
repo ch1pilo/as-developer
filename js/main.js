@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBuilder();
   initContactForm();
   initWhatsApp();
+  initLogin();
   document.getElementById('year').textContent = new Date().getFullYear();
 });
 
@@ -352,4 +353,14 @@ function setStatus(el, mensaje, tipo) {
 function initWhatsApp() {
   const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.mensajeWhatsapp)}`;
   document.querySelectorAll('[data-whatsapp-link]').forEach((link) => { link.href = url; });
+}
+
+// ===== Botón "Iniciar sesión" (solo si hay urlSistema en config.js) =====
+function initLogin() {
+  const base = CONFIG.urlSistema.replace(/\/+$/, '');
+  if (!base) return;
+  document.querySelectorAll('[data-login-link]').forEach((link) => {
+    link.href = `${base}/login`;
+    link.closest('[data-login]').hidden = false;
+  });
 }

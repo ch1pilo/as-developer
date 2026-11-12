@@ -2082,3 +2082,19 @@ button {
     padding: 48px 48px 48px 0;
   }
 }
+
+/* ===== Menú compacto en laptops pequeñas (1024–1279 px): 7 opciones + botón en una línea ===== */
+.nav__link,
+.nav .btn--sm {
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav__list {
+    gap: 16px;
+  }
+
+  .nav__link {
+    letter-spacing: 0.06em;
+  }
+}
