@@ -1,0 +1,397 @@
+/* ===== Centro de ayuda de Forger Fire (ayuda/) =====
+   Base: styles.css de la landing. */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ===== Portada ===== */
+.ayuda-hero { padding: 72px 0; }
+
+.ayuda-hero__inner {
+  max-width: 760px;
+  text-align: center;
+}
+
+.ayuda-hero__titulo {
+  margin: 16px 0;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+}
+
+.ayuda-hero__titulo em { font-style: normal; color: var(--orange); }
+
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px auto 0;
+  padding: 0 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: border-color 200ms ease;
+}
+
+.buscador:focus-within { border-color: var(--orange); }
+
+.buscador .icon { flex: none; width: 22px; height: 22px; color: var(--grey); }
+
+.buscador input {
+  flex: 1;
+  min-width: 0;
+  height: 58px;
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: none;
+  border: 0;
+  outline: none;
+}
+
+.buscador input::placeholder { color: var(--text-dim); }
+
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.rol {
+  padding: 8px 16px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.rol.is-activo {
+  color: var(--ink);
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rol:not(.is-activo):hover { color: var(--text); border-color: var(--grey); }
+}
+
+/* ===== Categorías ===== */
+.categorias {
+  display: grid;
+  gap: 20px;
+}
+
+.categoria {
+  padding: 28px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.categoria[hidden] { display: none; }
+
+.categoria__icono {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+}
+
+.categoria__icono .icon { width: 22px; height: 22px; }
+.categoria__icono--naranja { color: #c2410c; background: #fde5d8; }
+.categoria__icono--azul { color: #1d4ed8; background: #dfe8fb; }
+.categoria__icono--verde { color: #2f7d55; background: #dcefe3; }
+.categoria__icono--morado { color: #6d28d9; background: #ebe3fb; }
+
+.categoria__titulo { font-size: 1.25rem; }
+
+.categoria__desc {
+  margin: 6px 0 16px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.guias {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.guias li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.guias li[hidden] { display: none; }
+
+.guias a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.guias span {
+  flex: none;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .guias a:hover { color: var(--accent-text); }
+}
+
+.sin-resultados {
+  padding: 32px;
+  text-align: center;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+}
+
+/* ===== Soporte ===== */
+.soporte { padding: 64px 0; }
+
+.soporte__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.soporte .section__title { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+
+/* ===== Página de guía ===== */
+.guia-layout {
+  display: grid;
+  gap: 32px;
+  padding-top: 40px;
+  padding-bottom: 88px;
+}
+
+.guia-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--accent-text);
+}
+
+.guia-volver .icon { width: 18px; height: 18px; }
+
+.guia-indice__titulo {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.guia-indice ul { margin: 0; padding: 0; list-style: none; }
+
+.guia-indice li a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  border-left: 2px solid var(--border);
+}
+
+.guia-indice li a[aria-current='page'] {
+  font-weight: 600;
+  color: var(--text);
+  border-left-color: var(--orange);
+}
+
+.guia { max-width: 720px; }
+
+.migas {
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.migas a { color: var(--text-muted); text-decoration: none; }
+
+.guia__titulo { font-size: clamp(2rem, 5vw, 2.8rem); }
+
+.guia__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin: 14px 0 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.chip-rol {
+  padding: 3px 10px;
+  font-weight: 600;
+  color: var(--success);
+  border: 1px solid currentColor;
+}
+
+.guia__intro { font-size: 1.1rem; color: var(--text-muted); }
+
+.paso-lista {
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.paso {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 18px;
+  padding-bottom: 32px;
+}
+
+.paso__num {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--orange);
+}
+
+.paso__cuerpo h2 {
+  margin: 4px 0 8px;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.paso__cuerpo p + p { margin-top: 10px; }
+
+.ejemplo code {
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  background: var(--bone-2);
+  border: 1px solid var(--border);
+}
+
+.captura {
+  margin: 20px 0 0;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.captura img { width: 100%; height: auto; }
+
+.captura figcaption {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+.nota {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  padding: 16px 18px;
+  border: 1px solid;
+}
+
+.nota .icon { flex: none; width: 22px; height: 22px; margin-top: 2px; }
+.nota a { color: inherit; font-weight: 600; }
+.nota--tip { color: #1d4e35; background: #e3f1e8; border-color: #b9dcc7; }
+.nota--alerta { color: #7a2e0c; background: #fdeee5; border-color: #f4c9b1; }
+
+.guia-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.guia-nav__sig {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  font-weight: 600;
+  text-align: right;
+  text-decoration: none;
+}
+
+.guia-nav__sig small {
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+
+.guia-nav__sig .icon { width: 18px; height: 18px; color: var(--orange); }
+
+/* ===== Tamaños ===== */
+@media (min-width: 768px) {
+  .categorias { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .categorias { grid-template-columns: repeat(3, 1fr); }
+
+  .guia-layout {
+    grid-template-columns: 240px 1fr;
+    gap: 56px;
+    padding-top: 56px;
+  }
+
+  .guia-indice {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    align-self: start;
+  }
+}
+
+/* El header es fijo: el contenido deja su espacio */
+.ayuda-hero { padding-top: calc(var(--header-h) + 56px); }
+.guia-layout { padding-top: calc(var(--header-h) + 40px); }
+
+/* Guías aún sin publicar */
+.guias__pronto { color: var(--text-dim); }
+
+.guia-indice li span {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  border-left: 2px solid var(--border);
+}
+
+.enlace { color: var(--accent-text); font-weight: 500; }
+
+@media (min-width: 1024px) {
+  .guia-layout { padding-top: calc(var(--header-h) + 56px); }
+}
+
+/* Páginas que empiezan en fondo claro: el header lleva su fondo oscuro desde arriba */
+.pagina-clara .header::before { opacity: 1; }
+
+/* En celular, el índice lateral solo deja el enlace de volver */
+@media (max-width: 1023px) {
+  .guia-indice__titulo,
+  .guia-indice ul { display: none; }
+
+  .guia-volver { margin-bottom: 0; }
+}

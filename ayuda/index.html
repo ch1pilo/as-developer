@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de ayuda | Forger Fire | ForgerDev</title>
+  <meta name="description" content="Guías paso a paso para usar Forger Fire, el sistema para restaurantes: entrar, tomar pedidos, cobrar, inventario, reportes y bot de WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d0f12">
+  <link rel="canonical" href="https://TU-DOMINIO.com/ayuda/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/ayuda.css">
+  <script src="../js/config.js" defer></script>
+  <script src="../js/ayuda.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo" aria-label="ForgerDev, inicio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239 48" aria-hidden="true" focusable="false"><rect x="8" y="8" width="8" height="32" fill="#f2f1ed"/><rect x="8" y="8" width="32" height="8" fill="#f2f1ed"/><rect x="8" y="22" width="16" height="8" fill="#f2f1ed"/><rect x="28" y="22" width="8" height="8" fill="#e8551c"/><path d="M60.72 12.86H76.87V16.701999999999998H65.14V23.298H76.25800000000001V27.106H65.14V37.0H60.72ZM79.79400000000001 27.921999999999997Q79.79400000000001 25.066 80.899 22.924Q82.004 20.782 84.02700000000002 19.609Q86.05000000000001 18.436 88.736 18.436Q91.388 18.436 93.411 19.609Q95.43400000000001 20.782 96.53900000000002 22.924Q97.644 25.066 97.644 27.921999999999997Q97.644 30.778 96.53900000000002 32.92Q95.43400000000001 35.062 93.411 36.235Q91.388 37.408 88.736 37.408Q86.05000000000001 37.408 84.02700000000002 36.235Q82.004 35.062 80.899 32.92Q79.79400000000001 30.778 79.79400000000001 27.921999999999997ZM93.156 27.921999999999997Q93.156 25.1 91.983 23.536Q90.81 21.972 88.736 21.972Q86.628 21.972 85.47200000000001 23.536Q84.316 25.1 84.316 27.921999999999997Q84.316 30.744 85.47200000000001 32.308Q86.628 33.872 88.736 33.872Q90.84400000000001 33.872 92.0 32.308Q93.156 30.744 93.156 27.921999999999997ZM101.418 18.843999999999998H105.49800000000002L105.60000000000001 22.345999999999997Q106.144 20.544 107.215 19.694Q108.28600000000002 18.843999999999998 109.95200000000001 18.843999999999998H111.61800000000001V22.584H109.918Q107.81000000000002 22.584 106.79000000000002 23.519Q105.77000000000001 24.454 105.77000000000001 26.528V37.0H101.418ZM114.98400000000001 37.34 119.47200000000001 37.034Q119.81200000000001 38.122 120.679 38.666Q121.546 39.21 123.24600000000001 39.21Q127.42800000000001 39.21 127.42800000000001 35.504V33.192Q126.78200000000001 34.518 125.35400000000001 35.317Q123.926 36.116 122.158 36.116Q119.914 36.116 118.16300000000001 35.010999999999996Q116.412 33.906 115.42600000000002 31.9Q114.44000000000001 29.894 114.44000000000001 27.31Q114.44000000000001 24.726 115.409 22.72Q116.378 20.714 118.129 19.575Q119.88000000000001 18.436 122.09 18.436Q124.028 18.436 125.45600000000002 19.302999999999997Q126.88400000000001 20.169999999999998 127.56400000000001 21.665999999999997V18.843999999999998H131.81400000000002V35.402Q131.81400000000002 38.836 129.502 40.672Q127.19000000000001 42.508 123.24600000000001 42.508Q119.778 42.508 117.70400000000001 41.131Q115.63000000000001 39.754 114.98400000000001 37.34ZM127.462 27.174Q127.462 24.692 126.30600000000001 23.264Q125.15 21.836 123.17800000000001 21.836Q121.206 21.836 120.084 23.298Q118.962 24.759999999999998 118.962 27.276Q118.962 29.792 120.101 31.254Q121.24000000000001 32.716 123.17800000000001 32.716Q125.18400000000001 32.716 126.32300000000001 31.237000000000002Q127.462 29.758 127.462 27.174ZM135.622 27.921999999999997Q135.622 25.1 136.71 22.941000000000003Q137.798 20.782 139.787 19.609Q141.776 18.436 144.428 18.436Q147.012 18.436 148.967 19.592Q150.92200000000003 20.747999999999998 151.99300000000002 22.941Q153.06400000000002 25.134 153.06400000000002 28.16V29.146H140.144Q140.28 31.492 141.436 32.716Q142.592 33.94 144.56400000000002 33.94Q145.99200000000002 33.94 146.978 33.277Q147.964 32.614 148.33800000000002 31.424L152.792 31.695999999999998Q152.044 34.348 149.851 35.878Q147.65800000000002 37.408 144.53 37.408Q141.84400000000002 37.408 139.82100000000003 36.235Q137.798 35.062 136.71 32.92Q135.622 30.778 135.622 27.921999999999997ZM144.428 21.869999999999997Q142.66 21.869999999999997 141.52100000000002 22.991999999999997Q140.382 24.113999999999997 140.144 26.222H148.542Q148.406 24.046 147.318 22.958Q146.23000000000002 21.869999999999997 144.428 21.869999999999997ZM156.838 18.843999999999998H160.918L161.02 22.345999999999997Q161.564 20.544 162.635 19.694Q163.706 18.843999999999998 165.372 18.843999999999998H167.038V22.584H165.338Q163.23 22.584 162.20999999999998 23.519Q161.19 24.454 161.19 26.528V37.0H156.838Z" fill="#f2f1ed"/><path d="M172.594 12.86H180.074Q185.65 12.86 188.659 16.005Q191.668 19.15 191.668 24.964Q191.668 30.744 188.71 33.872Q185.752 37.0 180.27800000000002 37.0H172.594ZM188.608 24.964Q188.608 15.715999999999998 180.074 15.715999999999998H175.518V34.144H180.074Q188.608 34.144 188.608 24.964ZM194.93200000000002 27.990000000000002Q194.93200000000002 25.168 195.935 23.026Q196.93800000000002 20.884 198.774 19.728Q200.61 18.572 203.058 18.572Q205.404 18.572 207.20600000000002 19.677Q209.008 20.782 210.01100000000002 22.924Q211.014 25.066 211.014 28.024V28.874H197.924Q198.06 31.73 199.437 33.209Q200.814 34.688 203.19400000000002 34.688Q204.928 34.688 206.067 33.889Q207.20600000000002 33.09 207.68200000000002 31.662L210.74200000000002 31.9Q210.02800000000002 34.382 208.005 35.894999999999996Q205.982 37.408 203.19400000000002 37.408Q200.678 37.408 198.808 36.251999999999995Q196.93800000000002 35.096 195.935 32.971Q194.93200000000002 30.846 194.93200000000002 27.990000000000002ZM203.058 21.291999999999998Q200.95000000000002 21.291999999999998 199.60700000000003 22.583999999999996Q198.264 23.875999999999998 197.924 26.357999999999997H207.886Q207.68200000000002 23.842 206.407 22.567Q205.132 21.291999999999998 203.058 21.291999999999998ZM213.35999999999999 18.98H216.488L221.724 34.076L226.96 18.98H230.088L223.526 37.0H219.922Z" fill="#9aa1ab"/></svg></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menu" class="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="../index.html#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="../index.html#productos" class="nav__link">Productos</a></li>
+          <li><a href="../index.html#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="../index.html#proceso" class="nav__link">Proceso</a></li>
+          <li><a href="../index.html#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="../index.html#faq" class="nav__link">Preguntas</a></li>
+          <li data-login hidden><a href="#" class="nav__link nav__link--login" data-login-link>Iniciar sesión</a></li>
+          <li><a href="../index.html#cotizador" class="btn btn--primary btn--sm">Cotiza gratis</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada con buscador -->
+    <section class="section section--dark ayuda-hero">
+      <div class="container ayuda-hero__inner">
+        <p class="section__tag">Centro de ayuda · Forger Fire</p>
+        <h1 class="ayuda-hero__titulo">¿En qué te <em>ayudamos</em>?</h1>
+        <p class="section__lead">Guías cortas, paso a paso y con imágenes, para usar Forger Fire en tu restaurante.</p>
+
+        <label class="buscador" for="buscar">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <span class="sr-only">Buscar una guía</span>
+          <input id="buscar" type="search" placeholder="Ej: cerrar jornada, tasa BCV, verificar pago" autocomplete="off">
+        </label>
+
+        <div class="roles" role="group" aria-label="Filtrar por rol">
+          <button type="button" class="rol is-activo" data-rol="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="rol" data-rol="dueno" aria-pressed="false">Dueño</button>
+          <button type="button" class="rol" data-rol="cajero" aria-pressed="false">Cajero</button>
+          <button type="button" class="rol" data-rol="mesero" aria-pressed="false">Mesero</button>
+          <button type="button" class="rol" data-rol="cocina" aria-pressed="false">Cocina</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías. Las guías sin escribir van como <span class="guias__pronto"> hasta publicarlas. -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="categorias">
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--naranja"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h2 class="categoria__titulo">Primeros pasos</h2>
+            <p class="categoria__desc">Deja tu restaurante listo para el primer pedido.</p>
+            <ul class="guias">
+              <li data-roles="dueno cajero mesero cocina"><a href="entrar.html">Cómo entrar al sistema</a><span>2 min</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Cambiar la clave de un empleado</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Configurar tu restaurante</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero"><span class="guias__pronto">Registrar la tasa BCV del día</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Métodos de pago</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Empleados y permisos</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Productos, combos y recetas</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--azul"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 12h6M9 16h4"/></svg></div>
+            <h2 class="categoria__titulo">El día a día</h2>
+            <p class="categoria__desc">Del primer pedido de la mañana al cierre de la noche.</p>
+            <ul class="guias">
+              <li data-roles="dueno cajero"><span class="guias__pronto">Abrir la jornada</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero mesero"><span class="guias__pronto">Tomar un pedido</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero mesero"><span class="guias__pronto">Agregar o quitar productos</span><span>Pronto</span></li>
+              <li data-roles="cocina"><span class="guias__pronto">Ver y preparar las comandas</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero"><span class="guias__pronto">Cobrar y verificar pagos</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero"><span class="guias__pronto">Cancelar o reabrir un pedido</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero"><span class="guias__pronto">Cerrar la jornada</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--verde"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></div>
+            <h2 class="categoria__titulo">Inventario</h2>
+            <p class="categoria__desc">Que nunca te falte un ingrediente.</p>
+            <ul class="guias">
+              <li data-roles="dueno"><span class="guias__pronto">Entrada de mercancía</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Stock mínimo y alertas</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Mermas y kardex</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--morado"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></div>
+            <h2 class="categoria__titulo">Reportes</h2>
+            <p class="categoria__desc">Cuánto vendiste, qué se vende más y cuánto ganas.</p>
+            <ul class="guias">
+              <li data-roles="dueno"><span class="guias__pronto">Ventas del día y por fechas</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Productos y meseros</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Costos y ganancia</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Exportar a PDF</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--naranja"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 9h18M8 13h4"/></svg></div>
+            <h2 class="categoria__titulo">Menú público</h2>
+            <p class="categoria__desc">Tu carta en línea para compartir con tus clientes.</p>
+            <ul class="guias">
+              <li data-roles="dueno"><span class="guias__pronto">Activar y compartir tu menú</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Cambiar colores y plantilla</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--verde"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1-5A8 8 0 1 1 21 12z"/></svg></div>
+            <h2 class="categoria__titulo">Bot de WhatsApp</h2>
+            <p class="categoria__desc">Plan Fire + Bot: pedidos que entran solos.</p>
+            <ul class="guias">
+              <li data-roles="dueno cajero"><span class="guias__pronto">Cómo llegan los pedidos del bot</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero"><span class="guias__pronto">Verificar el comprobante de pago</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Horario y zonas de delivery</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--azul"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+            <h2 class="categoria__titulo">Tu suscripción</h2>
+            <p class="categoria__desc">Prueba gratis, pagos y cambios de plan.</p>
+            <ul class="guias">
+              <li data-roles="dueno"><span class="guias__pronto">Tu prueba de 20 días</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Cómo pagar tu mensualidad</span><span>Pronto</span></li>
+              <li data-roles="dueno"><span class="guias__pronto">Qué pasa si se vence</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+          <article class="categoria">
+            <div class="categoria__icono categoria__icono--morado"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></svg></div>
+            <h2 class="categoria__titulo">Preguntas frecuentes</h2>
+            <p class="categoria__desc">Las dudas que más nos hacen.</p>
+            <ul class="guias">
+              <li data-roles="dueno cajero mesero cocina"><span class="guias__pronto">Olvidé mi contraseña</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero mesero cocina"><span class="guias__pronto">¿Funciona en el celular?</span><span>Pronto</span></li>
+              <li data-roles="dueno cajero"><span class="guias__pronto">¿Qué pasa si se va el internet?</span><span>Pronto</span></li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="sin-resultados" hidden>No encontramos guías con esa búsqueda. Escríbenos por WhatsApp y te ayudamos.</p>
+      </div>
+    </section>
+
+    <!-- Soporte -->
+    <section class="section section--dark soporte">
+      <div class="container soporte__inner">
+        <div>
+          <h2 class="section__title">¿No encuentras lo que buscas?</h2>
+          <p class="section__lead">Escríbenos y te respondemos el mismo día.</p>
+        </div>
+        <a href="#" class="btn btn--primary" data-whatsapp-link target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="../index.html" class="logo" aria-label="ForgerDev, inicio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239 48" aria-hidden="true" focusable="false"><rect x="8" y="8" width="8" height="32" fill="#f2f1ed"/><rect x="8" y="8" width="32" height="8" fill="#f2f1ed"/><rect x="8" y="22" width="16" height="8" fill="#f2f1ed"/><rect x="28" y="22" width="8" height="8" fill="#e8551c"/><path d="M60.72 12.86H76.87V16.701999999999998H65.14V23.298H76.25800000000001V27.106H65.14V37.0H60.72ZM79.79400000000001 27.921999999999997Q79.79400000000001 25.066 80.899 22.924Q82.004 20.782 84.02700000000002 19.609Q86.05000000000001 18.436 88.736 18.436Q91.388 18.436 93.411 19.609Q95.43400000000001 20.782 96.53900000000002 22.924Q97.644 25.066 97.644 27.921999999999997Q97.644 30.778 96.53900000000002 32.92Q95.43400000000001 35.062 93.411 36.235Q91.388 37.408 88.736 37.408Q86.05000000000001 37.408 84.02700000000002 36.235Q82.004 35.062 80.899 32.92Q79.79400000000001 30.778 79.79400000000001 27.921999999999997ZM93.156 27.921999999999997Q93.156 25.1 91.983 23.536Q90.81 21.972 88.736 21.972Q86.628 21.972 85.47200000000001 23.536Q84.316 25.1 84.316 27.921999999999997Q84.316 30.744 85.47200000000001 32.308Q86.628 33.872 88.736 33.872Q90.84400000000001 33.872 92.0 32.308Q93.156 30.744 93.156 27.921999999999997ZM101.418 18.843999999999998H105.49800000000002L105.60000000000001 22.345999999999997Q106.144 20.544 107.215 19.694Q108.28600000000002 18.843999999999998 109.95200000000001 18.843999999999998H111.61800000000001V22.584H109.918Q107.81000000000002 22.584 106.79000000000002 23.519Q105.77000000000001 24.454 105.77000000000001 26.528V37.0H101.418ZM114.98400000000001 37.34 119.47200000000001 37.034Q119.81200000000001 38.122 120.679 38.666Q121.546 39.21 123.24600000000001 39.21Q127.42800000000001 39.21 127.42800000000001 35.504V33.192Q126.78200000000001 34.518 125.35400000000001 35.317Q123.926 36.116 122.158 36.116Q119.914 36.116 118.16300000000001 35.010999999999996Q116.412 33.906 115.42600000000002 31.9Q114.44000000000001 29.894 114.44000000000001 27.31Q114.44000000000001 24.726 115.409 22.72Q116.378 20.714 118.129 19.575Q119.88000000000001 18.436 122.09 18.436Q124.028 18.436 125.45600000000002 19.302999999999997Q126.88400000000001 20.169999999999998 127.56400000000001 21.665999999999997V18.843999999999998H131.81400000000002V35.402Q131.81400000000002 38.836 129.502 40.672Q127.19000000000001 42.508 123.24600000000001 42.508Q119.778 42.508 117.70400000000001 41.131Q115.63000000000001 39.754 114.98400000000001 37.34ZM127.462 27.174Q127.462 24.692 126.30600000000001 23.264Q125.15 21.836 123.17800000000001 21.836Q121.206 21.836 120.084 23.298Q118.962 24.759999999999998 118.962 27.276Q118.962 29.792 120.101 31.254Q121.24000000000001 32.716 123.17800000000001 32.716Q125.18400000000001 32.716 126.32300000000001 31.237000000000002Q127.462 29.758 127.462 27.174ZM135.622 27.921999999999997Q135.622 25.1 136.71 22.941000000000003Q137.798 20.782 139.787 19.609Q141.776 18.436 144.428 18.436Q147.012 18.436 148.967 19.592Q150.92200000000003 20.747999999999998 151.99300000000002 22.941Q153.06400000000002 25.134 153.06400000000002 28.16V29.146H140.144Q140.28 31.492 141.436 32.716Q142.592 33.94 144.56400000000002 33.94Q145.99200000000002 33.94 146.978 33.277Q147.964 32.614 148.33800000000002 31.424L152.792 31.695999999999998Q152.044 34.348 149.851 35.878Q147.65800000000002 37.408 144.53 37.408Q141.84400000000002 37.408 139.82100000000003 36.235Q137.798 35.062 136.71 32.92Q135.622 30.778 135.622 27.921999999999997ZM144.428 21.869999999999997Q142.66 21.869999999999997 141.52100000000002 22.991999999999997Q140.382 24.113999999999997 140.144 26.222H148.542Q148.406 24.046 147.318 22.958Q146.23000000000002 21.869999999999997 144.428 21.869999999999997ZM156.838 18.843999999999998H160.918L161.02 22.345999999999997Q161.564 20.544 162.635 19.694Q163.706 18.843999999999998 165.372 18.843999999999998H167.038V22.584H165.338Q163.23 22.584 162.20999999999998 23.519Q161.19 24.454 161.19 26.528V37.0H156.838Z" fill="#f2f1ed"/><path d="M172.594 12.86H180.074Q185.65 12.86 188.659 16.005Q191.668 19.15 191.668 24.964Q191.668 30.744 188.71 33.872Q185.752 37.0 180.27800000000002 37.0H172.594ZM188.608 24.964Q188.608 15.715999999999998 180.074 15.715999999999998H175.518V34.144H180.074Q188.608 34.144 188.608 24.964ZM194.93200000000002 27.990000000000002Q194.93200000000002 25.168 195.935 23.026Q196.93800000000002 20.884 198.774 19.728Q200.61 18.572 203.058 18.572Q205.404 18.572 207.20600000000002 19.677Q209.008 20.782 210.01100000000002 22.924Q211.014 25.066 211.014 28.024V28.874H197.924Q198.06 31.73 199.437 33.209Q200.814 34.688 203.19400000000002 34.688Q204.928 34.688 206.067 33.889Q207.20600000000002 33.09 207.68200000000002 31.662L210.74200000000002 31.9Q210.02800000000002 34.382 208.005 35.894999999999996Q205.982 37.408 203.19400000000002 37.408Q200.678 37.408 198.808 36.251999999999995Q196.93800000000002 35.096 195.935 32.971Q194.93200000000002 30.846 194.93200000000002 27.990000000000002ZM203.058 21.291999999999998Q200.95000000000002 21.291999999999998 199.60700000000003 22.583999999999996Q198.264 23.875999999999998 197.924 26.357999999999997H207.886Q207.68200000000002 23.842 206.407 22.567Q205.132 21.291999999999998 203.058 21.291999999999998ZM213.35999999999999 18.98H216.488L221.724 34.076L226.96 18.98H230.088L223.526 37.0H219.922Z" fill="#9aa1ab"/></svg></a>
+      <p>© <span id="year"></span> ForgerDev · Forger Fire · Centro de ayuda · <a href="../forger-fire.html">Forger Fire</a> · <a href="../privacidad.html">Privacidad</a></p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="#" data-whatsapp-link target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+      <path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6.1C4.9 9.8 9.9 4.9 16 4.9s11.1 4.9 11.1 10.9-5 10.6-11.1 10.6zm6.1-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.5-.6-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+  </a>
+
+</body>
+</html>

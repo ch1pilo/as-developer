@@ -14,4 +14,5 @@ const CONFIG = {
   whatsapp: '584246018457',
   mensajeWhatsapp: 'Hola Ángel, vi tu página y quiero cotizar un proyecto.',
   mensajeWhatsappFire: 'Hola Ángel, vi Forger Fire y quiero información para mi restaurante.',
+  mensajeWhatsappAyuda: 'Hola Ángel, necesito ayuda con Forger Fire.',
 };
